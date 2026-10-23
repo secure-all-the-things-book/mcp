@@ -18,7 +18,8 @@ public class AuthApplication {
 
 	@Bean
 	Customizer<HttpSecurity> httpSecurityCustomizer() {
-		return http -> http.oauth2AuthorizationServer(a -> a.oidc(Customizer.withDefaults()));
+		return http -> http
+				.oauth2AuthorizationServer(a -> a.oidc(Customizer.withDefaults()));
 	}
 
 	@Bean
