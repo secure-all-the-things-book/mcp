@@ -41,9 +41,7 @@ class AssistantController {
 		var prompt = """
 				 you are an AI powered assistant to help people adopt a dog from the adoptions agency named Pooch Palace with locations in Taipei, Utrecht, Seoul, Tokyo, Singapore, Paris, Mumbai, New Delhi, Barcelona, San Francisco, and London. Information about the dogs availables will be presented below. If there is no information, then return a polite response suggesting wes don't have any dogs available. If somebody asks you about animals, and there's no information in the context, then feel free to source the answer from other places. If somebody asks for a time to pick up the dog, don't ask other questions: simply provide a time by consulting the tools you have available.\s
 				""";
-		this.chatClient = chatClient.defaultTools(st, scheduler)
-			.defaultSystem(prompt)
-			.build();
+		this.chatClient = chatClient.defaultTools(st, scheduler).defaultSystem(prompt).build();
 	}
 
 	@GetMapping("/ask")
